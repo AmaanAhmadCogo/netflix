@@ -42,8 +42,8 @@ const Details = () => {
             {
                 movieID ?
                     <>
-                        <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "row", paddingTop: "100px", color: "white", fontFamily: "Noto Sans"}}>
-                            <div><img src={movieID.Poster} style={{ width: "300px", height: "auto", padding: " 0 0 0 50px" }} /></div>
+                        <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "row", paddingTop: "120px", paddingLeft:"50px" ,color: "white", fontFamily: "Noto Sans"}}>
+                            <div style={styles.card}><img src={movieID.Poster} style={{ width: "300px", height: "auto" }} /></div>
                             <div style={{ width: "300px", height: "auto", padding: " 0 0 0 50px", fontFamily: "Noto Sans" }}>
                                 <h1 style={{fontSixe:"140px", textShadow: "1px 1px 16px rgba(32, 181, 255, 1)"}}>
                                     {movieID.Title}
@@ -64,13 +64,12 @@ const Details = () => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ width: "85%", height: "auto", padding: " 0 0 0 50px", fontFamily: "Noto Sans", color: "white", fontSize: "40px" }}>
+                        <div style={{ width: "85%", height: "auto", padding: " 0 0 0 50px", fontFamily: "Noto Sans", color: "white", fontSize: "30px" }}>
                             <h3>Plot:</h3>
                             <p>{movieID.Plot}</p>
                         </div>
                     </>
                     : console.log("not working", movieID.id)
-                // : <h2 style={{color:"white"}}>"Loading..." </h2>
             }
 
         </div >
@@ -94,7 +93,7 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         padding: "10px",
-        marginBottom: "30px",
+        // marginBottom: "30px",
         justifyContent: "center",
         alignItems: "center",
         // backgroundColor: "green"
